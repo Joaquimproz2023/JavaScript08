@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com DOM</title>
+    <style>
+        #area{
+        background: #FF007F;
+        color: white;
+        width: 185px;
+        height: 150px;
+        line-height:155px;
+        margin: auto;
+        text-align: center;
+        border-radius: 15%;
+        box-shadow: 10px 10px 10px rgb(0, 171, 250);
+    }
+
+    *{
+        background-color: rgb(135, 55, 209);
+    }
+        *entrar{
+            background: rgb(153, 1, 255);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>I love pussy!
+    <br> (eu amo poema)</h1>
+
+    <div id="area">
+        Interaja...
+    </div>
+
+    <script>
+        var dom = window.document.getElementById('area')
+        dom.addEventListener('mouseover', clicar)
+        dom.addEventListener('click', entrar)
+        dom.addEventListener('mouseout', sair)
+
+        function clicar(){
+                dom.innerText = "Clique uma vez!"
+                dom.style.background = '#ED30CF'
+        }
+
+        function entrar (){
+                dom.innerText = "você é um robô? Não? Saia"
+
+        }
+
+        function sair () {
+            dom.innerText = "Você saiu!"
+        }
+    </script>    
+</body>
+</html>
